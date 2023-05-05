@@ -14,15 +14,17 @@ members = [
     "support-bundle",
 ]
 
+# dirty hack here as cargo insists patches refer to different URLs, but we really want the same URL
+# but a different branch. So we put www in to trick cargo. Yes, it is gross
 [patch.'https://github.com/Azure/iot-identity-service']
-aziotctl-common = { git = 'https://github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
-aziot-certd-config = { git = 'https://github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
-aziot-identity-common = { git = 'https://github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
-aziot-identityd-config = { git = 'https://github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
-aziot-key-common = { git = 'https://github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
-aziot-keyd-config = { git = 'https://github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
-aziot-keys-common = { git = 'https://github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
-cert-renewal = { git = 'https://github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
+aziotctl-common = { git = 'https://www.github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
+aziot-certd-config = { git = 'https://www.github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
+aziot-identity-common = { git = 'https://www.github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
+aziot-identityd-config = { git = 'https://www.github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
+aziot-key-common = { git = 'https://www.github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
+aziot-keyd-config = { git = 'https://www.github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
+aziot-keys-common = { git = 'https://www.github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
+cert-renewal = { git = 'https://www.github.com/Azure/iot-identity-service', branch = 'feature/snapping' }
 
 [profile.dev]
 panic = 'abort'
